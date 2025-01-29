@@ -116,3 +116,37 @@ document.addEventListener("DOMContentLoaded", () => {
   initThemeSelector();
   initContactForm();
 });
+
+export async function fetchJSON(url) {
+  try {
+      const response = await fetch(url);
+      if (!response.ok) {
+          throw new Error(`Failed to fetch: ${response.statusText}`);
+      }
+      return await response.json();
+  } catch (error) {
+      console.error('Error fetching JSON:', error);
+      throw error;
+  }
+}
+
+export async function fetchGitHubData(username) {
+  return fetchJSON(`https://api.github.com/users/${username}`);
+}
+
+export function renderProjects(projects, containerElement, headingLevel = 'h2') {
+  if (!containerElement) return;
+  
+  containerElement.innerHTML = '';
+  
+  projects.forEach(project => {
+      const article = document.createElement('article');
+      article.innerHTML = `
+          <${headingLevel}>${project.title}</${headingLevel}>
+          <time>${project.year}</time>
+          <img src="${project.image}" alt="${project.title}">
+          <p>${project.description}</p>
+      `;
+      containerElement.appendChild(article);
+  });
+}

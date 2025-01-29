@@ -1,0 +1,74 @@
+[
+    {
+      "title": "Personal Portfolio Website",
+      "year": "2024",
+      "image": "https://placehold.co/300x200",
+      "description": "A responsive portfolio website built with HTML, CSS, and JavaScript. Features dark mode support and dynamic content loading."
+    },
+    {
+      "title": "E-commerce Platform",
+      "year": "2023",
+      "image": "https://placehold.co/300x200",
+      "description": "Full-stack e-commerce solution with React frontend and Node.js backend. Includes shopping cart, user authentication, and payment processing."
+    },
+    {
+      "title": "Task Management App",
+      "year": "2023",
+      "image": "https://placehold.co/300x200",
+      "description": "A Kanban-style task management application built with Vue.js and Firebase. Features real-time updates and team collaboration."
+    },
+    {
+      "title": "Weather Dashboard",
+      "year": "2023",
+      "image": "https://placehold.co/300x200",
+      "description": "Interactive weather dashboard using OpenWeather API. Displays current conditions and 5-day forecast with dynamic updates."
+    },
+    {
+      "title": "Social Media Analytics Tool",
+      "year": "2022",
+      "image": "https://placehold.co/300x200",
+      "description": "Data visualization tool for social media metrics using D3.js. Provides insights through interactive charts and graphs."
+    },
+    {
+      "title": "Chat Application",
+      "year": "2022",
+      "image": "https://placehold.co/300x200",
+      "description": "Real-time chat application using Socket.io and Express. Features private messaging and file sharing capabilities."
+    },
+    {
+      "title": "Budget Tracker",
+      "year": "2022",
+      "image": "https://placehold.co/300x200",
+      "description": "Personal finance management tool with expense categorization and budget planning features. Built with React and MongoDB."
+    },
+    {
+      "title": "Recipe Manager",
+      "year": "2021",
+      "image": "https://placehold.co/300x200",
+      "description": "Digital recipe management system with ingredient scaling and meal planning features. Uses PostgreSQL for data storage."
+    },
+    {
+      "title": "Fitness Tracking App",
+      "year": "2021",
+      "image": "https://placehold.co/300x200",
+      "description": "Mobile-first fitness tracking application with workout planning and progress visualization. Built using React Native."
+    },
+    {
+      "title": "Content Management System",
+      "year": "2021",
+      "image": "https://placehold.co/300x200",
+      "description": "Custom CMS built with PHP and MySQL. Features user roles, content versioning, and media management."
+    },
+    {
+      "title": "Music Streaming Service",
+      "year": "2020",
+      "image": "https://placehold.co/300x200",
+      "description": "Spotify-like music streaming platform with playlist creation and social features. Uses AWS S3 for media storage."
+    },
+    {
+      "title": "Educational Platform",
+      "year": "2020",
+      "image": "https://placehold.co/300x200",
+      "description": "Online learning platform with course management, video lectures, and progress tracking. Built with Django and React."
+    }
+  ]

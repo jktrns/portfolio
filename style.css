@@ -1,7 +1,7 @@
 :root {
   --color-accent: oklch(65.43% 0.1207 122.31);
   --color-border: oklch(50% 10% 200 / 40%);
-  --max-width: 100ch;
+  --max-width: 80ch;
   --spacing-sm: 0.5em;
   --spacing-md: 1em;
   --spacing-lg: 2em;
@@ -19,7 +19,7 @@ html {
 }
 
 body {
-  font: 100%/1.5 system-ui;
+  font: 100%/1.5 "Geist", system-ui;
   max-width: var(--max-width);
   margin-inline: max(var(--spacing-md), (100% - var(--max-width)) / 2);
   padding: var(--spacing-md);
@@ -124,7 +124,12 @@ textarea {
 .projects article {
   display: grid;
   grid-template-rows: subgrid;
-  grid-row: span 3;
+  grid-row: span 4;
+  padding: var(--spacing-md);
+  border-radius: 8px;
+  background: oklch(from var(--color-accent) l 5% h / 20%);
+  box-shadow: 0 2px 4px oklch(0 0 0 / 10%);
+  transition: transform 0.2s ease;
 }
 
 .projects h2 {
@@ -146,7 +151,6 @@ textarea {
   padding: 2em;
   background: oklch(from var(--color-accent) l 5% h / 20%);
   border-radius: 8px;
-  border: 1px solid var(--color-accent);
 }
 
 .resume header h1 {
@@ -217,4 +221,41 @@ textarea {
 #certifications time {
   color: var(--color-accent);
   font-weight: bold;
+}
+
+#profile-stats {
+  margin: 2em 0;
+  padding: 1em;
+  background: oklch(from var(--color-accent) l 5% h / 20%);
+  border-radius: 8px;
+}
+
+#profile-stats h2 {
+  margin-top: 0;
+  color: var(--color-accent);
+}
+
+#profile-stats dl {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0em 1em;
+  margin: 0;
+}
+
+#profile-stats dt {
+  grid-row: 1;
+}
+
+#profile-stats dd {
+  margin: 0;
+  grid-row: 2;
+  text-align: left;
+  font-size: 1.5em;
+  font-weight: 600;
+}
+
+@media (max-width: 600px) {
+  #profile-stats dl {
+      grid-template-columns: repeat(2, 1fr);
+  }
 }
