@@ -259,3 +259,99 @@ textarea {
       grid-template-columns: repeat(2, 1fr);
   }
 }
+
+.container {
+  display: flex;
+  flex-direction: row;
+  align-items: start;
+  gap: 2em;
+  margin: 2em 0;
+}
+
+@media (max-width: 600px) {
+  .container {
+    flex-direction: column;
+    align-items: center;
+    gap: 1em;
+  }
+}
+
+#projects-plot {
+  max-width: 15em;
+  margin-block: 2em;
+  overflow: visible;
+}
+
+#projects-plot path {
+  cursor: pointer;
+  transition: all 300ms ease;
+}
+
+#projects-plot:hover path {
+  opacity: 0.5;
+}
+
+#projects-plot:hover path:hover {
+  opacity: 1 !important;
+}
+
+#projects-plot:hover path.selected {
+  opacity: 1 !important;
+}
+
+.faded {
+  opacity: 0.2 !important;
+}
+
+#projects-plot:hover path.faded {
+  opacity: 0.2 !important;
+}
+
+#projects-plot:hover path.faded:hover {
+  opacity: 0.5 !important;
+}
+
+.legend {
+  flex: 1;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(9em, 1fr));
+  gap: 1em;
+  margin: auto 0;
+  padding: 1em;
+  list-style: none;
+  border: 1px solid var(--color-border);
+  border-radius: 4px;
+}
+
+.legend li {
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+  font-family: Baskerville, serif;
+  font-variant-numeric: oldstyle-nums;
+}
+
+.swatch {
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  background: var(--color);
+  border-radius: 4px;
+}
+
+.searchBar {
+  width: 100%;
+  padding: 0.5em;
+  margin-bottom: 1em;
+  border: 1px solid var(--color-border);
+  border-radius: 4px;
+  font: inherit;
+}
+
+.selected {
+  --color: oklch(60% 45% 0) !important;
+}
+
+.selected:is(path) {
+  fill: var(--color);
+}
