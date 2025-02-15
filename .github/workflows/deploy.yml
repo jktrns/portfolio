@@ -18,6 +18,9 @@ concurrency:
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
 
     steps:
       - name: Checkout
@@ -44,16 +47,11 @@ jobs:
           mkdir -p meta
           git pull
           git add -f meta/loc.csv
-          git commit -m "Update code statistics" || echo "No changes to commit"
-          git push
+          git diff-index --quiet HEAD || git commit -m "Update code statistics"
+          git push || echo "No changes to push"
 
       - name: Setup Pages
         uses: actions/configure-pages@v4
-
-      - name: Build
-        run: |
-          # Add any build steps here if needed
-          # For example, if you're using a static site generator
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
