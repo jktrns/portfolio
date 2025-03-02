@@ -17,7 +17,20 @@
     <div id="stats"></div>
 
     <h2>Commits by Time of Day</h2>
-    <div id="chart"></div>
+    <div id="time-controls">
+        <label>
+            Show commits until:
+            <input type="range" id="time-slider" min="0" max="100" value="100">
+            <time id="selectedTime"></time>
+        </label>
+    </div>
+    <div id="scrollytelling">
+        <div id="scroll-container">
+            <div id="spacer"></div>
+            <div id="items-container"></div>
+        </div>
+        <div id="chart"></div>
+    </div>
 
     <div id="commit-tooltip" class="info tooltip" hidden>
         <dt>Commit</dt>
@@ -34,6 +47,8 @@
 
     <p id="selection-count">No commits selected</p>
     <dl id="language-breakdown" class="stats"></dl>
+    <h2>Files by Size</h2>
+    <dl class="files"></dl>
 
     <script type="module" src="../global.js"></script>
     <script type="module" src="./main.js"></script>
